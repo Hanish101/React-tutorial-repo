@@ -1,0 +1,231 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* ******************************HEADER******************************* */
+
+header{
+    background-color: #071e22;
+    text-align: center;
+    /* display: flex; */
+}
+
+a{
+    text-decoration: none;
+}
+
+header h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #3292a3;
+    padding: 20px 50px;
+}
+
+header nav{
+    margin: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px 0px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: #1D7874;
+    align-items: center;
+    /* row, row-reverse, column, column-reverse */
+}
+
+header nav a{
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s;
+    margin-right: 20px;
+    border: 2px solid #1D7874;
+    color: #00ffc8;
+    padding: 7px 20px;
+    font-weight: 700;
+    /* border-radius: 10px; */
+}
+
+header a:hover{
+    color: #00d9ff;
+    background-color: #071e22;
+    border: 2px solid #00d9ff;
+    box-shadow: 0 0px 15px #00d9ff;
+
+}
+
+/* Span transition effect */
+.topnav{
+    padding: 0px;  
+}
+.topnav span:nth-child(1){
+    position: absolute;
+    top: 0;
+    right: 500px;
+    width: 0%;
+    border: 2px solid #00d9ff;
+    transition: 1s;
+    opacity: 0;
+}
+.topnav:hover span:nth-child(1){
+    right: 0%;
+    width: 500px;
+    opacity: 100%;
+}
+
+.topnav span:nth-child(2){
+    position: absolute;
+    top: 50px;
+    right: 0%;
+    width: 0%;
+    border: 2px solid #00d9ff;
+    transition: 1s;
+    opacity: 0;
+}
+.topnav:hover span:nth-child(2){
+    right: 0%;
+    width: 500px;
+    opacity: 100%;
+}
+
+.topnav span:nth-child(3){
+    position: absolute;
+    top: 0px;
+    right: 500px;
+    height: 0px;
+    border: 2px solid #00d9ff;
+    transition: 1s;
+    opacity: 0;
+}
+.topnav:hover span:nth-child(3){
+    right: 500px;
+    height: 50px;
+    opacity: 100%;
+}
+
+.topnav span:nth-child(4){
+    position: absolute;
+    top: 50px;
+    right: 0%;
+    height: 0px;
+    border: 2px solid #00d9ff;
+    transition: 1s;
+    opacity: 0;
+
+}
+.topnav:hover span:nth-child(4){
+    height: 50px;
+    top: 0px;
+    opacity: 100%;
+}
+
+/* ******************************MAIN CONTENT******************************* */
+
+.container{
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    background: #00d9ff;
+}
+
+.container div{
+    background: #3292a3;
+    width: auto;
+    padding: 10px;
+    height: 65vh;
+}
+.main-content{
+    color:#071e22;
+}
+.main-content div{
+    overflow-y: scroll;
+    height: 80%;
+    background: #071e22;
+    color:#3292a3;
+    transition: 1s;
+}
+/* .main-content div:hover{
+    text-shadow: 0 0 10px #00d9ff;
+    color:#3292a3;
+} */
+
+.side-content{
+    border-left: 1px solid gray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.side-content ul{
+    margin: 0;
+    display: inline;
+
+}
+.side-content ul li{
+    text-align: center;
+    list-style: none;
+    margin: 5px 0px;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    font-weight: 400;
+    background-color: #00d9ff;
+    transition: 0.5s;
+}
+.side-content ul li:hover{
+    padding: 30px;
+}
+.side-content ul li:hover{
+    box-shadow: 0 0 25px #00d9ff;
+}
+
+
+
+/* ******************************FOOTER*********************************** */
+
+footer{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0px;
+    background:#071e22;
+}
+footer div{
+    width: auto;
+
+}
+
+footer div p{
+    height: 30px;
+    margin-right: 20px;
+    color: #00d9ff;
+    padding: 0px 20px;
+    padding-top: 10px;
+    border: 1px solid #071e22;
+    font-weight: 600;
+    transition: 0.5s;
+}
+footer div p:hover{
+    box-shadow: 0 0 15px #00d9ff;
+    border: 1px solid #00d9ff;
+    background:#1D7874;
+    color: #071e22;
+
+}
+
+#contacts {
+    float: left;
+}
+#products{
+    float: left;
+}
+#newsletter{
+    float: right;
+}
+#footer-title{
+    clear: both;
+    text-align: center;
+    padding: 8px;
+    background-color: #00d9ff;
+    color:#071e22;
+
+}

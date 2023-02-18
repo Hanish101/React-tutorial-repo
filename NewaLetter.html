@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="NewsLetter.css">
+</head>
+<body>
+    <div class="newsletter">
+        <div>
+            <h3>Subscribe to us</h3>
+            <form action="https://jsonplaceholder.typicode.com/users" method="POST" enctype="application/x-www-form-urlencoded">
+                <div>
+                    <label for="username">
+                        Username:
+                    </label>
+                    <input type="text" name="username" placeholder="Enter name here"/>
+                </div>
+                <div>
+                    <label>
+                        Email:
+                    </label>
+                    <input type="email" name="email" placeholder="Enter email here"/>
+                </div>
+                <div>
+                    <input id="button" type="submit" value="Subscribe">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
