@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: aquamarine;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+nav div{
+    width: 100px;
+    background-color: rgb(255, 0, 255);
+}
+
+@media screen and (max-width: 900px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav div{
+        margin-bottom: 100px;
+        background-color: rgb(0, 0, 255);
+    }
+} 
+
+
+/* @media screen and (max-width: 1200px){
+    body{
+        background: blueviolet;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body{
+        background: blue;
+    }
+} */
+

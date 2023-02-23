@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ResponsiveImageGallary</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 200px;
+            /* width: 100%; */
+        }
+        .col{
+            flex: 25%;
+        }
+        @media screen and (max-width:800px) {
+            .col{
+                flex:50%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Image gallary</h1>
+
+    <div class="container">
+        <div class="col">
+            <img src="https://source.unsplash.com/random/300x300?sig=1" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=1" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=1" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=1" alt="">
+        </div>
+        <div class="col">
+            <img src="https://source.unsplash.com/random/300x300?sig=2" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=2" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=2" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=2" alt="">
+        </div>
+        <div class="col">
+            <img src="https://source.unsplash.com/random/300x300?sig=3" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=3" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=3" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=3" alt="">
+        </div>
+        <div class="col">
+            <img src="https://source.unsplash.com/random/300x300?sig=4" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=4" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=4" alt="">
+            <img src="https://source.unsplash.com/random/300x300?sig=4" alt="">
+        </div>
+    </div>
+</body>
+</html>
