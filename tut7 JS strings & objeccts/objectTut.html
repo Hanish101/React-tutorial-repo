@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS object tut</h1>
+
+    <script>
+        //What is object
+        let myObj = {
+            id : 1,
+            field : "Comps",
+            key: "34uy487"
+        }
+
+        //access the object
+        // console.log(myObj)
+        // console.log(typeof myObj.field, ", ", myObj.field)
+        // console.log(typeof myObj.id,  ", ", myObj.id)
+
+        //add new property
+        // myObj.year = "BE"
+        // myObj["sem"] = 8
+        // console.log(myObj.sem)
+
+        //object dynamic value
+        squareVal = {
+        }
+
+        for(let index = 0; index < 5; index ++){
+            name = "student " + index
+            squareVal[name] = index*index
+        }
+
+        console.log(squareVal)
+
+        //get only keys
+        const keys = Object.keys(myObj)
+        console.log(keys)
+
+    </script>
+</body>
+</html>
