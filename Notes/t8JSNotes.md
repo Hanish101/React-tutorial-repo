@@ -31,3 +31,9 @@
 > biggest problem of callback is that if another callback is dependent on that, it will be nasted inside first callback.
 
 > this makes ***nested callback***, which can become difficult to handle.
+
+### JS falsified values
+    1. false
+    2. 0
+    3. undefined 
+    4. null
