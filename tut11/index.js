@@ -62,8 +62,73 @@ const server = http.createServer(function(request, response){
         response.write("User data created")
     }
 
-    //Method PUT**************************************************************************************************
-    
+    //Method PUT*************************************************************************************************
+    //Updating the values
+    else if(request.method == 'PUT' && paths[1] === 'users'){
+        if(paths.length === 2){
+            //create empty data
+            let data = ""
+            //add data chucks to  data variable
+            request.on("data", function(chunk){
+                data += chunk
+                // console.log(chunk)
+            })
+            //convert data to JSON 
+            request.on("end", function(){
+                
+                const user = JSON.parse(data.toString())
+                // console.log("Curr",user)
+                // console.log("lis",users)
+
+                //get index of element with given name
+                const indx = users.findIndex(function(cuser){
+                    return cuser.name == user.name
+                })
+                //check if user exists
+                if(indx === -1){
+                    response.write("User not found")
+                    console.log("User not found")
+                }
+                //if user exists then update user data
+                else{
+                    // for (let key in user) {
+                    //     users[indx][key] = user[key]
+                    // }
+
+                    //SPREAD operator
+                    users[indx] = {
+                        ...users[indx],
+                        ...user
+                    }
+
+                    response.write("User updated")
+                    console.log("User updated")
+                }
+
+            })
+
+        }
+        else{
+            response.write("Wrong URL for PUT method")
+        }
+    }
+
+    //Method DELETE**********************************************************************************************
+    //Deleting the user
+    else if(request.method == 'DELETE' &&  paths[1] === "users" && paths[2]){
+        const idx = paths[2]
+        const user = users[idx]
+        //if user exists
+        if(user){
+            users.splice(idx, 1)
+            response.write("Successfully removed the user")
+        }
+        //if not
+        else{
+            response.write("User Not found")
+        }
+    }
+
 
     //if random url given
     else {
