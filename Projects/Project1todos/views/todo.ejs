@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+
+                <% if(todo) { %>
+                <h1 href="">
+                    <%= todo.title %>
+                </h1>
+                
+                <p>
+                    <%= todo.description %>
+                </p>
+                
+                <span class="badge rounded-pill <%= todo.completed ? 'bg-success' : 'bg-danger' %>">
+                    <%= todo.completed ? "done" : "undone" %>
+                </span>
+                <% } else { %>
+                    <h1>Not found</h1>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+<%- include("partials/footer") %>

@@ -9,7 +9,7 @@
 
 # Project 
 ## Folders
-    1. Controllwe
+    1. Controller
     2. Router
     3. VIEW
     4. Middleware
@@ -37,3 +37,18 @@
         })
 
     4. Create routes
+
+
+## EJS (Embedded javascript)
+
+basic syntax - <% same code %>
+variables and values - <%= varName %>
+string - <% "some value" %>
+import synatx - <%- include("path/to/file") %>
+
+### todos loops
+```
+<% todos.forEach((todo) => { %>
+    <li><%= todo.title %></li>
+<%  }); %>
+```
